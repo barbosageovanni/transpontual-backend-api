@@ -4,7 +4,7 @@
       "builder": "nixpacks"
     },
     "deploy": {
-      "startCommand": "  python3 -c "import os, sys; sys.path.append('backend_fastapi'); exec('import uvicorn; from app.main import app; uvicorn.run(app, host=\"0.0.0.0\", port=int(os.getenv(\"PORT\", 8000)))')"",
+      "startCommand": "python start.py",
       "restartPolicyType": "ON_FAILURE",
       "restartPolicyMaxRetries": 10
     }
