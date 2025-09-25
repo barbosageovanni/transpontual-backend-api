@@ -31,4 +31,4 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 8000
 
 # Run application
-CMD ["python", "server.py"]
+  CMD ["python", "-c", "import os, sys; sys.path.append('backend_fastapi'); from app.main import app; import uvicorn; uvicorn.run(app, host='0.0.0.0', port=int(os.getenv('PORT', 8000)))"]
